@@ -1,0 +1,126 @@
+.task-status-section {
+  height: fit-content;
+}
+
+.section-title {
+  margin-bottom: 1.5rem;
+  color: #2c3e50;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.status-cards-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.status-card {
+  background: white;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  height: fit-content;
+}
+
+.status-card h2 {
+  margin-bottom: 1.2rem;
+  color: #2c3e50;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.placeholder-text {
+  color: #999;
+  font-style: italic;
+  text-align: center;
+  padding: 1.5rem 0;
+}
+
+.task-item, .resolved-item {
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 1.2rem;
+  margin-bottom: 1rem;
+  
+}
+
+
+.task-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.5rem;
+}
+
+.task-header h4 {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #2c3e50;
+  font-weight: 600;
+  flex: 1;
+  margin-right: 0.5rem;
+}
+
+.task-id {
+  font-size: 0.8rem;
+  color: #3498db;
+  font-weight: bold;
+}
+
+.task-customer {
+  color: #666;
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+}
+
+.task-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  font-size: 0.8rem;
+  color: #777;
+}
+
+.task-category {
+  background: #e3f2fd;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  color: #1976d2;
+  font-weight: 500;
+}
+
+.task-date {
+  color: #888;
+}
+
+.complete-btn {
+  background-color: #27ae60;
+  color: white;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  width: 100%;
+}
+
+.resolved-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+.remove-btn {
+  background: #e74c3c;
+  color: white;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
