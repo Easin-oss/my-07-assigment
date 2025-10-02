@@ -1,0 +1,128 @@
+.footer {
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  margin-top: auto;
+}
+
+.footer-main {
+  padding: 3rem 0 2rem;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1.2fr;
+  gap: 2rem;
+}
+
+.footer-column h3 {
+  color: #3498db;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.footer-column h4 {
+  color: #ecf0f1;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 1.2rem;
+  position: relative;
+}
+
+.company-info {
+  padding-right: 2rem;
+}
+
+.company-description {
+  color: #bdc3c7;
+  line-height: 1.6;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 0.7rem;
+}
+
+.footer-links a {
+  color: #bdc3c7;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.social-links a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #bdc3c7;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+
+.footer-bottom {
+  border-top: 1px solid #34495e;
+  padding: 1.5rem 0;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.footer-bottom-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  text-align: center;
+}
+
+.footer-bottom p {
+  color: #bdc3c7;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+@media (max-width: 1024px) {
+  .footer-content {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+  }
+  
+  .company-info {
+    grid-column: 1 / -1;
+    padding-right: 0;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+  
+  .footer-main {
+    padding: 2rem 0 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    text-align: center;
+  }
+
+  .social-links a {
+    justify-content: center;
+  }
+}
