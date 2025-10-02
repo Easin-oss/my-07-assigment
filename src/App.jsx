@@ -36,23 +36,38 @@ function App() {
     );
   };
 
+  const removeResolvedTask = (ticket) => {
+    setResolvedTasks(prev => prev.filter(task => task.id !== ticket.id));
+    setResolvedCount(prev => prev - 1);
+    toast.info(`Ticket #${ticket.id} has been removed from resolved tasks.`);
+  };
+
+
+  const completeTask = (ticket) => {
+    setTaskStatus(prev => prev.filter(task => task.id !== ticket.id));
+    setResolvedTasks(prev => [...prev, { ...ticket, status: 'resolved' }]);
+    setTickets(prevTickets => prevTickets.filter(t => t.id !== ticket.id));
+    setInProgressCount(prev => prev - 1);
+    setResolvedCount(prev => prev + 1);
+    toast.success(`Ticket #${ticket.id} has been marked as resolved and removed from tickets.`);
+  };
+
+  return (
+    <>
 
 
 
+      <Navbar></Navbar>
+      <Banner inProgressCount={inProgressCount} resolvedCount={resolvedCount}></Banner>
+      <Footer></Footer>
+      <div className="sections-container">
+        <TicketsSection tickets={tickets} onAddToTaskStatus={addToTaskStatus}></TicketsSection>
+        <TaskStatusSection taskStatus={taskStatus} resolvedTasks={resolvedTasks} onCompleteTask={completeTask} onRemoveResolvedTask={removeResolvedTask} ></TaskStatusSection>
+      </div>
 
 
+    </>
+  )
+}
 
-
-
-
-
-  
-    return (
-      <>
-        <Navbar></Navbar>
-        <Banner inProgressCount={inProgressCount} resolvedCount={resolvedCount}></Banner>
-      </>
-    )
-  }
-
-  export default App;
+export default App;
