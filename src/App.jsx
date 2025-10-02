@@ -6,8 +6,8 @@ function App() {
 
   return (
     <>
-      
-      
+      <Navbar></Navbar>
+      <Banner inProgressCount={inProgressCount} resolvedCount={resolvedCount}></Banner>
     </>
   )
 }
