@@ -1,4 +1,6 @@
 import { useState } from 'react'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import './App.css'
 import Navbar from './components/Navbar/Navbar';
 import Banner from './components/Banner/Banner';
@@ -6,6 +8,7 @@ import TicketsSection from './components/TicketsSection/TicketsSection';
 import TaskStatusSection from './components/TaskStatusSection/TaskStatusSection';
 import Footer from './components/Footer/Footer';
 import { initialTickets } from './data/ticketData';
+
 
 function App() {
   const [inProgressCount, setInProgressCount] = useState(0);
@@ -54,18 +57,26 @@ function App() {
 
   return (
     <>
-
-
-
-      <Navbar></Navbar>
-      <Banner inProgressCount={inProgressCount} resolvedCount={resolvedCount}></Banner>
-      <Footer></Footer>
-      <div className="sections-container">
-        <TicketsSection tickets={tickets} onAddToTaskStatus={addToTaskStatus}></TicketsSection>
-        <TaskStatusSection taskStatus={taskStatus} resolvedTasks={resolvedTasks} onCompleteTask={completeTask} onRemoveResolvedTask={removeResolvedTask} ></TaskStatusSection>
+      <div className="ticket-system">
+        <Navbar></Navbar>
+        <Banner inProgressCount={inProgressCount} resolvedCount={resolvedCount}></Banner>
+        
+        <div className="sections-container">
+          <TicketsSection tickets={tickets} onAddToTaskStatus={addToTaskStatus}></TicketsSection>
+          <TaskStatusSection taskStatus={taskStatus} resolvedTasks={resolvedTasks} onCompleteTask={completeTask} onRemoveResolvedTask={removeResolvedTask} ></TaskStatusSection>
+        </div>
+        
+        <ToastContainer
+          position="top-right"
+          autoClose={false}
+          hideProgressBar={true}
+          closeOnClick
+          draggable
+          pauseOnHover
+          theme="light"
+        ></ToastContainer>
+        <Footer></Footer>
       </div>
-
-
     </>
   )
 }
